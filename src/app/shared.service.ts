@@ -81,7 +81,10 @@ export class SharedService {
    * à jour sharedArraySubject avec la liste mise à jour.
    */
   public deleteProduct(index: number): void {
-    if (index >= 0 && index < this.listCartProduct.length) {
+    if (this.listCartProduct.length === 0) {
+      this.closeCartDialog();
+    }
+    else if (index >= 0 && index < this.listCartProduct.length) {
       this.listCartProduct.splice(index, 1);
     }
     this.sharedArraySubject.next([...this.listCartProduct]);
