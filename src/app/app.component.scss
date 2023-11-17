@@ -1,0 +1,30 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  height: 64px;
+  padding: 0 16px;
+
+  span:first-child {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 16px;
+
+    mat-icon {
+      font-size: 24px;
+    }
+  }
+}

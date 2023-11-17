@@ -1,0 +1,30 @@
+<div class="mat-grid-list">
+  <div class="mat-grid-tile" *ngFor="let product of products.products">
+    <mat-card class="product-card" *ngIf="product">
+      <mat-card-header class="header">
+        <div class="left-header">
+          <mat-card-title>{{ product.title }}</mat-card-title>
+          <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+        </div>
+        <mat-card-title class="right-header">
+          {{product.price | currency : "EUR" : "symbol"}}
+        </mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        class="product-image"
+        src="{{ product.thumbnail }}"
+        alt="{{ product.title }}"
+      />
+      <mat-card-content>
+        <p>{{ product.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <app-product-selection
+          class="product-selection"
+          [product]="product"
+        ></app-product-selection>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

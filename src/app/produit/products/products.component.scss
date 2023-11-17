@@ -1,0 +1,42 @@
+.mat-grid-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: hidden;
+
+}
+
+.product-card {
+  width: 380px;
+  height: 600px;
+  margin: 16px;
+  display: flex;
+  justify-content : space-evenly;
+}
+
+.product-image {
+  object-fit: cover;
+  aspect-ratio: 5/4;
+  margin: 15px;
+}
+
+.mdc-card__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.product-selection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-header{
+  font-weight: 100;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
